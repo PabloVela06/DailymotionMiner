@@ -4,13 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="18f6f131-f6d4-47a2-aa66-93b3e650150c" name="Changes" comment="Problems related to packages fixed">
-      <change beforePath="$PROJECT_DIR$/src/main/java/aiss/dailymotionminer/DailymotionMinerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/aiss/dailymotionminer/DailymotionMinerApplication.java" afterDir="false" />
+    <list default="true" id="18f6f131-f6d4-47a2-aa66-93b3e650150c" name="Changes" comment="All prepared">
+      <change afterPath="$PROJECT_DIR$/src/main/java/aiss/dailymotionminer/model/dailymotion/Channel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/aiss/dailymotionminer/model/dailymotion/Owner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/aiss/dailymotionminer/model/dailymotion/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/aiss/dailymotionminer/model/dailymotion/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -76,7 +86,15 @@
       <option name="project" value="LOCAL" />
       <updated>1778259557642</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="All prepared">
+      <option name="closed" value="true" />
+      <created>1778259652225</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1778259652225</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -84,6 +102,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Problems related to packages fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Problems related to packages fixed" />
+    <MESSAGE value="All prepared" />
+    <option name="LAST_COMMIT_MESSAGE" value="All prepared" />
   </component>
 </project>
