@@ -6,10 +6,10 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
-public class DailyMotionMinerApplication {
+public class DailymotionMinerApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(DailyMotionMinerApplication.class, args);
+        SpringApplication.run(DailymotionMinerApplication.class, args);
     }
 
     @Bean
@@ -17,5 +17,4 @@ public class DailyMotionMinerApplication {
         return new RestTemplate();
     }
 
-    public hola es una prueba
 }
