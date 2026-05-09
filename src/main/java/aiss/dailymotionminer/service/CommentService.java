@@ -21,7 +21,7 @@ public class CommentService {
 
     @Autowired
     RestTemplate restTemplate;
-
+/*
     public List<VMComment> getComment(String videoId, Integer maxComments){
         String uri = String.format("", videoId, maxComments);
         List<Comment> commentList = restTemplate.getForObject(uri, CommentList.class);
@@ -45,4 +45,6 @@ public class CommentService {
         }
         return res;
     }
+
+ */
 }
