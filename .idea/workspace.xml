@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="18f6f131-f6d4-47a2-aa66-93b3e650150c" name="Changes" comment="Create unfinished services">
+    <list default="true" id="18f6f131-f6d4-47a2-aa66-93b3e650150c" name="Changes" comment="Services prepared to changes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/aiss/dailymotionminer/service/CaptionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/aiss/dailymotionminer/service/CaptionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/aiss/dailymotionminer/service/ChannelService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/aiss/dailymotionminer/service/ChannelService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/aiss/dailymotionminer/service/CommentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/aiss/dailymotionminer/service/CommentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/aiss/dailymotionminer/service/VideoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/aiss/dailymotionminer/service/VideoService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,23 +50,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/hugop/Desktop/INGENIERÍA INFORMÁTICA SEVILLA/SEGUNDO DE CARRERA SEVILLA/SEGUNDO CUATRIMESTRE/AISS/Spring initializer/Integración/DailymotionMiner",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/hugop/Desktop/INGENIERÍA INFORMÁTICA SEVILLA/SEGUNDO DE CARRERA SEVILLA/SEGUNDO CUATRIMESTRE/AISS/Spring initializer/Integración/DailymotionMiner&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\hugop\Desktop\INGENIERÍA INFORMÁTICA SEVILLA\SEGUNDO DE CARRERA SEVILLA\SEGUNDO CUATRIMESTRE\AISS\Spring initializer\Integración\DailymotionMiner\src\main\java\aiss\dailymotionminer\service" />
@@ -124,7 +120,15 @@
       <option name="project" value="LOCAL" />
       <updated>1778263946500</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Services prepared to changes">
+      <option name="closed" value="true" />
+      <created>1778293101472</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1778293101473</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -135,6 +139,7 @@
     <MESSAGE value="All prepared" />
     <MESSAGE value="Model classes and Transformer class created" />
     <MESSAGE value="Create unfinished services" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create unfinished services" />
+    <MESSAGE value="Services prepared to changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Services prepared to changes" />
   </component>
 </project>
