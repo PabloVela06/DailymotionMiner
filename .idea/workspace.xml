@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="18f6f131-f6d4-47a2-aa66-93b3e650150c" name="Changes" comment="Create unfinished services">
-      <change afterPath="$PROJECT_DIR$/src/main/java/aiss/dailymotionminer/model/dailymotion/TokenInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/aiss/dailymotionminer/service/ChannelServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/aiss/dailymotionminer/etl/Transformer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/aiss/dailymotionminer/etl/Transformer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/aiss/dailymotionminer/service/AuxiliarFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/aiss/dailymotionminer/service/AuxiliarFunction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/aiss/dailymotionminer/service/ChannelService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/aiss/dailymotionminer/service/ChannelService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/aiss/dailymotionminer/service/CommentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/aiss/dailymotionminer/service/CommentService.java" afterDir="false" />
+    <list default="true" id="18f6f131-f6d4-47a2-aa66-93b3e650150c" name="Changes" comment="Implemented token request and tested with ChannelServiceTest.getChannel">
+      <change afterPath="$PROJECT_DIR$/src/test/java/aiss/dailymotionminer/service/AuxiliarTestFunction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/aiss/dailymotionminer/service/ChannelServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/aiss/dailymotionminer/service/ChannelServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,8 +16,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -175,7 +170,15 @@
       <option name="project" value="LOCAL" />
       <updated>1778263946500</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Implemented token request and tested with ChannelServiceTest.getChannel">
+      <option name="closed" value="true" />
+      <created>1778341404636</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1778341404636</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -209,7 +212,8 @@
     <MESSAGE value="All prepared" />
     <MESSAGE value="Model classes and Transformer class created" />
     <MESSAGE value="Create unfinished services" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create unfinished services" />
+    <MESSAGE value="Implemented token request and tested with ChannelServiceTest.getChannel" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented token request and tested with ChannelServiceTest.getChannel" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
