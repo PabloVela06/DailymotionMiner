@@ -3,6 +3,7 @@ package aiss.dailymotionminer.etl;
 import aiss.dailymotionminer.model.dailymotion.*;
 import aiss.dailymotionminer.model.videominer.*;
 
+import java.time.LocalDateTime;
 import java.util.Comparator;
 import java.util.UUID;
 
@@ -16,7 +17,7 @@ public class Transformer {
         return new VMChannel(createId(channel.getId()),
                 channel.getName(),
                 channel.getDescription(),
-                channel.getCreatedTime().toString());
+                LocalDateTime.ofEpochSecond(channel.getCreatedTime(), 0, java.time.ZoneOffset.UTC).toString());
     }
 
     public static VMCaption createVMCaption(Caption caption) {

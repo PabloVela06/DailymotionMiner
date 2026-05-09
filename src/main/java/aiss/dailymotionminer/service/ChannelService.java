@@ -17,14 +17,16 @@ public class ChannelService {
     RestTemplate restTemplate;
 
     //http://localhost:8080/videominer/channels
-    //https://peertube.cpy.re/api/v1/video-channels/{channelHandle}
+    //https://partner.api.dailymotion.com/rest/user/{channelId}?fields=created_time,description,id,username
     //http://localhost:8080/videominer/channels/{id}
 
-    public VMChannel getChannel(String channelHandle){ //channelHandle is a concatenation of name@host
-        String uri = String.format("", channelHandle);
-        Channel channel = restTemplate.getForObject(uri,Channel.class);
-        VMChannel postChannel = Transformer.createVMChannel(channel);
-        return postChannel;
+    public VMChannel getChannel(String channelId, String apiKey, String secretkey){
+        String uri = AuxiliarFunction.getDailymotionUri(String.format("/rest/user/%s?fields=created_time,description,id,username", channelId));
+
+        HttpEntity<Channel> request = new HttpEntity<>(null, AuxiliarFunction.getTokenHeader(AuxiliarFunction.getToken(apiKey, secretkey)));
+        ResponseEntity<Channel> response = restTemplate.exchange(uri, HttpMethod.GET, request, Channel.class);
+
+        return Transformer.createVMChannel(response.getBody());
     }
 
     public VMChannel postChannel(String channelHandle, String apiKey){
