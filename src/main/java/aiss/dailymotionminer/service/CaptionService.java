@@ -1,8 +1,8 @@
 package aiss.dailymotionminer.service;
 
-import aiss.peertubeminer.etl.Transformer;
-import aiss.peertubeminer.model.peertube.CaptionList;
-import aiss.peertubeminer.model.videominer.VMCaption;
+import aiss.dailymotionminer.etl.Transformer;
+import aiss.dailymotionminer.model.dailymotion.CaptionList;
+import aiss.dailymotionminer.model.videominer.VMCaption;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpMethod;
@@ -22,7 +22,7 @@ public class CaptionService {
     RestTemplate restTemplate;
 
     public List<VMCaption> getCaption(String videoId){
-        String uri = String.format("https://peertube.cpy.re/api/v1/videos/%s/captions", videoId);
+        String uri = String.format("", videoId);
         CaptionList captionList = restTemplate.getForObject(uri, CaptionList.class);
         return captionList.getCaptions().stream()
                 .map(cap -> Transformer.createVMCaption(cap))
@@ -31,8 +31,8 @@ public class CaptionService {
 
     public List<VMCaption> postCaption(String videoId, String vmVideoId, String apiKey){
         List<VMCaption> res = new ArrayList<>();
-        String getUri = String.format("https://peertube.cpy.re/api/v1/videos/%s/captions", videoId);
-        String postUri = String.format("http://localhost:8080/videominer/captions/videos/%s/captions", vmVideoId);
+        String getUri = String.format("", videoId);
+        String postUri = String.format("", vmVideoId);
         CaptionList captionList = restTemplate.getForObject(getUri, CaptionList.class);
         List<VMCaption> captions = captionList.getCaptions().stream()
                 .map(cap -> Transformer.createVMCaption(cap))

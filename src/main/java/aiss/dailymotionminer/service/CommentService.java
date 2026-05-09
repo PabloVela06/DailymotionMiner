@@ -1,8 +1,8 @@
 package aiss.dailymotionminer.service;
 
-import aiss.peertubeminer.etl.Transformer;
-import aiss.peertubeminer.model.peertube.CommentList;
-import aiss.peertubeminer.model.videominer.VMComment;
+import aiss.dailymotionminer.etl.Transformer;
+import aiss.dailymotionminer.model.dailymotion.Video;
+import aiss.dailymotionminer.model.videominer.VMComment;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpMethod;
@@ -23,8 +23,8 @@ public class CommentService {
     RestTemplate restTemplate;
 
     public List<VMComment> getComment(String videoId, Integer maxComments){
-        String uri = String.format("https://peertube.cpy.re/api/v1/videos/%s/comment-threads?count=%d", videoId, maxComments);
-        CommentList commentList = restTemplate.getForObject(uri, CommentList.class);
+        String uri = String.format("", videoId, maxComments);
+        List<Comment> commentList = restTemplate.getForObject(uri, CommentList.class);
         return commentList.getComment().stream()
                 .map(com -> Transformer.createVMComment(com))
                 .toList();
@@ -32,8 +32,8 @@ public class CommentService {
 
     public List<VMComment> postComment(String videoId, String vmVideoId, Integer maxComments, String apiKey){
         List<VMComment> res = new ArrayList<>();
-        String getUri = String.format("https://peertube.cpy.re/api/v1/videos/%s/comment-threads?count=%d", videoId, maxComments);
-        String postUri = String.format("http://localhost:8080/videominer/comments/videos/%s/comments", vmVideoId);
+        String getUri = String.format("", videoId, maxComments);
+        String postUri = String.format("", vmVideoId);
         CommentList commentList = restTemplate.getForObject(getUri, CommentList.class);
         List<VMComment> comments = commentList.getComment().stream()
                 .map(com -> Transformer.createVMComment(com))

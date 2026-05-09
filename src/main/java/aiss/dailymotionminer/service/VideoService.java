@@ -1,9 +1,9 @@
 package aiss.dailymotionminer.service;
 
-import aiss.peertubeminer.etl.Transformer;
-import aiss.peertubeminer.model.peertube.Video;
-import aiss.peertubeminer.model.peertube.VideoList;
-import aiss.peertubeminer.model.videominer.VMVideo;
+import aiss.dailymotionminer.etl.Transformer;
+import aiss.dailymotionminer.model.dailymotion.Video;
+import aiss.dailymotionminer.model.dailymotion.VideoList;
+import aiss.dailymotionminer.model.videominer.VMVideo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpMethod;
@@ -24,26 +24,26 @@ public class VideoService {
     @Autowired
     RestTemplate restTemplate;
 
-    public List<VMVideo> getVideo(String channelHandle, Integer maxVideo){
-        String uri = String.format("https://peertube.cpy.re/api/v1/video-channels/%s/videos?count=%d", channelHandle, maxVideo);
+    public List<VMVideo> getVideo(String videoId, Integer maxVideo){
+        String uri = String.format("", videoId, maxVideo);
         VideoList videoList = restTemplate.getForObject(uri, VideoList.class);
-        return videoList.getVideo().stream()
+        return videoList.getVideos().stream()
                 .map(vid -> Transformer.createVMVideo(vid))
                 .toList();
     }
 
-    public List<Video> getVideoPeerTube(String channelHandle, Integer maxVideo){
-        String uri = String.format("https://peertube.cpy.re/api/v1/video-channels/%s/videos?count=%d", channelHandle, maxVideo);
+    public List<Video> getVideoPeerTube(String videoId, Integer maxVideo){
+        String uri = String.format("", videoId, maxVideo);
         VideoList videoList = restTemplate.getForObject(uri, VideoList.class);
-        return videoList.getVideo();
+        return videoList.getVideos();
     }
 
-    public List<VMVideo> postVideo(String channelHandle, String vmChannelId, Integer maxVideo, String apiKey){
+    public List<VMVideo> postVideo(String videoId, String vmChannelId, Integer maxVideo, String apiKey){
         List<VMVideo> res = new ArrayList<>();
-        String getUri = String.format("https://peertube.cpy.re/api/v1/video-channels/%s/videos?count=%d", channelHandle, maxVideo);
-        String postUri = String.format("http://localhost:8080/videominer/videos/channels/%s/videos", vmChannelId);
+        String getUri = String.format("", videoId, maxVideo);
+        String postUri = String.format("", vmChannelId);
         VideoList videoList = restTemplate.getForObject(getUri, VideoList.class);
-        List<VMVideo> videos = videoList.getVideo().stream()
+        List<VMVideo> videos = videoList.getVideos().stream()
                 .map(vid -> Transformer.createVMVideo(vid))
                 .toList();
         for (VMVideo vid: videos){

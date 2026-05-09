@@ -1,8 +1,8 @@
 package aiss.dailymotionminer.service;
 
-import aiss.peertubeminer.etl.Transformer;
-import aiss.peertubeminer.model.peertube.Channel;
-import aiss.peertubeminer.model.videominer.VMChannel;
+import aiss.dailymotionminer.etl.Transformer;
+import aiss.dailymotionminer.model.dailymotion.Channel;
+import aiss.dailymotionminer.model.videominer.VMChannel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpMethod;
@@ -21,15 +21,15 @@ public class ChannelService {
     //http://localhost:8080/videominer/channels/{id}
 
     public VMChannel getChannel(String channelHandle){ //channelHandle is a concatenation of name@host
-        String uri = String.format("https://peertube.cpy.re/api/v1/video-channels/%s", channelHandle);
+        String uri = String.format("", channelHandle);
         Channel channel = restTemplate.getForObject(uri,Channel.class);
         VMChannel postChannel = Transformer.createVMChannel(channel);
         return postChannel;
     }
 
     public VMChannel postChannel(String channelHandle, String apiKey){
-        String getUri = String.format("https://peertube.cpy.re/api/v1/video-channels/%s", channelHandle);
-        String postUri = "http://localhost:8080/videominer/channels";
+        String getUri = String.format("", channelHandle);
+        String postUri = "";
         Channel channel = restTemplate.getForObject(getUri,Channel.class);
         VMChannel postChannel = Transformer.createVMChannel(channel);
 
