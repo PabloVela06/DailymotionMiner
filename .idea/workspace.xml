@@ -4,28 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="18f6f131-f6d4-47a2-aa66-93b3e650150c" name="Changes" comment="Implemented token request and tested with ChannelServiceTest.getChannel">
-      <change afterPath="$PROJECT_DIR$/src/main/java/aiss/dailymotionminer/controller/ChannelController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/aiss/dailymotionminer/repositories/ChannelRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/aiss/dailymotionminer/service/CaptionServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/aiss/dailymotionminer/service/CommentServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/aiss/dailymotionminer/service/UserServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/aiss/dailymotionminer/service/VideoServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/aiss/dailymotionminer/model/dailymotion/CaptionList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/aiss/dailymotionminer/model/dailymotion/CaptionList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/aiss/dailymotionminer/model/dailymotion/TokenInfo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/aiss/dailymotionminer/model/dailymotion/Video.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/aiss/dailymotionminer/model/dailymotion/Video.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/aiss/dailymotionminer/model/dailymotion/VideoList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/aiss/dailymotionminer/model/dailymotion/VideoList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/aiss/dailymotionminer/service/AuxiliarFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/aiss/dailymotionminer/service/AuxiliarFunction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/aiss/dailymotionminer/service/CaptionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/aiss/dailymotionminer/service/CaptionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/aiss/dailymotionminer/service/ChannelService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/aiss/dailymotionminer/service/ChannelService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/aiss/dailymotionminer/service/CommentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/aiss/dailymotionminer/service/CommentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/aiss/dailymotionminer/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/aiss/dailymotionminer/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/aiss/dailymotionminer/service/VideoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/aiss/dailymotionminer/service/VideoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/aiss/dailymotionminer/service/AuxiliarTestFunction.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/aiss/dailymotionminer/service/ChannelServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/aiss/dailymotionminer/service/ChannelServiceTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="18f6f131-f6d4-47a2-aa66-93b3e650150c" name="Changes" comment="Implemented token request and tested with ChannelServiceTest.getChannel" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,7 +21,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="funcional2" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -98,6 +77,10 @@
     "JUnit.VideoServiceTest.testPostVideo.executor": "Run",
     "JUnit.VideoServiceTest.updateVideo.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
@@ -105,7 +88,7 @@
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "testIvan",
+    "git-widget-placeholder": "funcional2",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/ivanc/OneDrive/Documentos/Universidad/segundo/cuatrimestre2/AISS/DailymotionMiner/src/main/java/aiss/dailymotionminer",
     "node.js.detected.package.eslint": "true",
