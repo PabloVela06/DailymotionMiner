@@ -31,7 +31,7 @@ public class ChannelService {
 
     public VMChannel postChannel(String channelId, String apiKey){
         String getUri = String.format("https://api.dailymotion.com/user/%s?fields=created_time,description,id,username", channelId);
-        String postUri = "http://localhost:8080/videominer/channels";
+        String postUri = AuxiliarFunction.getVideoMinerUri("/channels");
         Channel channel = restTemplate.getForObject(getUri,Channel.class);
         VMChannel postChannel = Transformer.createVMChannel(channel);
 
@@ -41,7 +41,7 @@ public class ChannelService {
     }
 
     public VMChannel updateChannel(VMChannel vmChannel, String apiKey) {
-        String uri = String.format("http://localhost:8080/videominer/channels/%s", vmChannel.getId());
+        String uri = AuxiliarFunction.getVideoMinerUri(String.format("/channels/%s", vmChannel.getId()));
         HttpEntity<VMChannel> request = new HttpEntity<>(vmChannel, AuxiliarFunction.getApiKeyHeader(apiKey));
         ResponseEntity<VMChannel> response = restTemplate.exchange(uri, HttpMethod.PUT, request, VMChannel.class);
         return response.getBody();

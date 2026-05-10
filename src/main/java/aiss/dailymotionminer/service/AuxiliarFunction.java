@@ -10,7 +10,7 @@ public class AuxiliarFunction {
         return headers;
     }
 
-    public static String getDailymotionUri(String path) {
-        return String.format("https://partner.api.dailymotion.com%s", path);
+    public static String getVideoMinerUri(String path) {
+        return String.format("http://localhost:8080/videominer%s", path);
     }
 }

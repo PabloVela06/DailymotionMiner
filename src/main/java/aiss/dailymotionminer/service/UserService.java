@@ -42,7 +42,7 @@ public class UserService {
     public List<VMUser> postUser(String channelId, String apiKey) {
         List<VMUser> res = new ArrayList<>();
         String getUri = String.format("https://api.dailymotion.com/user/%s/videos?fields=id,title,description,created_time,tags,owner.id,owner.username,owner.avatar_240_url", channelId);
-        String postUri = "http://localhost:8080/videominer/users";
+        String postUri = AuxiliarFunction.getVideoMinerUri("/users");
 
         VideoList videoList = restTemplate.getForObject(getUri, VideoList.class);
         List<VMUser> users = videoList.getVideos().stream()
@@ -58,7 +58,7 @@ public class UserService {
     }
 
     public VMUser postUser(VMUser vmUser, String apiKey) {
-        String uri = "http://localhost:8080/videominer/users";
+        String uri = AuxiliarFunction.getVideoMinerUri("/users");
         HttpEntity<VMUser> request = new HttpEntity<>(vmUser, AuxiliarFunction.getApiKeyHeader(apiKey));
         ResponseEntity<VMUser> response = restTemplate.exchange(uri, HttpMethod.POST, request, VMUser.class);
         return response.getBody();

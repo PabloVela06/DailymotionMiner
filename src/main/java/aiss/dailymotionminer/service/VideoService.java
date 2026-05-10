@@ -41,7 +41,7 @@ public class VideoService {
     public List<VMVideo> postVideo(String channelId, String vmChannelId, Integer maxVideo, String apiKey){
         List<VMVideo> res = new ArrayList<>();
         String getUri = String.format("https://api.dailymotion.com/user/%s/videos?fields=id,title,description,created_time,tags,owner.id,owner.username,owner.avatar_240_url&limit=%d", channelId, maxVideo);
-        String postUri = String.format("http://localhost:8080/videominer/videos/channels/%s/videos", vmChannelId);
+        String postUri = AuxiliarFunction.getVideoMinerUri(String.format("/videos/channels/%s/videos", vmChannelId));
         VideoList videoList = restTemplate.getForObject(getUri, VideoList.class);
         List<VMVideo> videos = videoList.getVideos().stream()
                 .map(vid -> Transformer.createVMVideo(vid))
@@ -55,14 +55,14 @@ public class VideoService {
     }
 
     public VMVideo postVideo(String vmChannelId, VMVideo vmVideo, String apiKey) {
-        String uri = String.format("http://localhost:8080/videominer/videos/channels/%s/videos", vmChannelId);
+        String uri = AuxiliarFunction.getVideoMinerUri(String.format("/videos/channels/%s/videos", vmChannelId));
         HttpEntity<VMVideo> request = new HttpEntity<>(vmVideo, AuxiliarFunction.getApiKeyHeader(apiKey));
         ResponseEntity<VMVideo> response = restTemplate.exchange(uri, HttpMethod.POST, request, VMVideo.class);
         return response.getBody();
     }
 
     public VMVideo updateVideo(VMVideo vmVideo, String apiKey) {
-        String uri = String.format("http://localhost:8080/videominer/videos/%s", vmVideo.getId());
+        String uri = AuxiliarFunction.getVideoMinerUri(String.format("/videos/%s", vmVideo.getId()));
         HttpEntity<VMVideo> request = new HttpEntity<>(vmVideo, AuxiliarFunction.getApiKeyHeader(apiKey));
         ResponseEntity<VMVideo> response = restTemplate.exchange(uri, HttpMethod.PUT, request, VMVideo.class);
         return response.getBody();
