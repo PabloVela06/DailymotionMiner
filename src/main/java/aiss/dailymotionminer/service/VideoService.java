@@ -17,31 +17,31 @@ import java.util.List;
 @Service
 public class VideoService {
 
-    //https://peertube.cpy.re/api/v1/video-channels/{channelHandle}/videos
-    //http://localhost:8080/videominer/videos/channels/{channelId}/videos
-    //http://localhost:8080/videominer/videos/{id}
-
     @Autowired
     RestTemplate restTemplate;
 
-    public List<VMVideo> getVideo(String videoId, Integer maxVideo){
-        String uri = String.format("", videoId, maxVideo);
+    //https://api.dailymotion.com/user/{channelId}/videos
+    //http://localhost:8080/videominer/videos/channels/{channelId}/videos
+    //http://localhost:8080/videominer/videos/{id}
+
+    public List<VMVideo> getVideo(String channelId, Integer maxVideo){
+        String uri = String.format("https://api.dailymotion.com/user/%s/videos?fields=id,title,description,created_time,tags,owner.id,owner.username,owner.avatar_240_url&limit=%d", channelId, maxVideo);
         VideoList videoList = restTemplate.getForObject(uri, VideoList.class);
         return videoList.getVideos().stream()
                 .map(vid -> Transformer.createVMVideo(vid))
                 .toList();
     }
 
-    public List<Video> getVideoPeerTube(String videoId, Integer maxVideo){
-        String uri = String.format("", videoId, maxVideo);
+    public List<Video> getVideoDailymotion(String channelId, Integer maxVideo){
+        String uri = String.format("https://api.dailymotion.com/user/%s/videos?fields=id,title,description,created_time,tags,owner.id,owner.username,owner.avatar_240_url&limit=%d", channelId, maxVideo);
         VideoList videoList = restTemplate.getForObject(uri, VideoList.class);
         return videoList.getVideos();
     }
 
-    public List<VMVideo> postVideo(String videoId, String vmChannelId, Integer maxVideo, String apiKey){
+    public List<VMVideo> postVideo(String channelId, String vmChannelId, Integer maxVideo, String apiKey){
         List<VMVideo> res = new ArrayList<>();
-        String getUri = String.format("", videoId, maxVideo);
-        String postUri = String.format("", vmChannelId);
+        String getUri = String.format("https://api.dailymotion.com/user/%s/videos?fields=id,title,description,created_time,tags,owner.id,owner.username,owner.avatar_240_url&limit=%d", channelId, maxVideo);
+        String postUri = String.format("http://localhost:8080/videominer/videos/channels/%s/videos", vmChannelId);
         VideoList videoList = restTemplate.getForObject(getUri, VideoList.class);
         List<VMVideo> videos = videoList.getVideos().stream()
                 .map(vid -> Transformer.createVMVideo(vid))

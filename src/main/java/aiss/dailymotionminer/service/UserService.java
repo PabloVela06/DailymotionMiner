@@ -18,32 +18,37 @@ import java.util.List;
 @Service
 public class UserService {
 
-    //https://peertube.cpy.re/api/v1/video-channels/{channelHandle}/videos
+    //https://api.dailymotion.com/user/{channelId}/videos
     //http://localhost:8080/videominer/users
 
     @Autowired
     RestTemplate restTemplate;
 
     private User createUser(Video video){
-        return new User(video.getUserId(), video.getUserName(), String.format("dailymotion.com/user/%s", video.getUserName()), video.getDescription());
+        return new User(video.getUserId(),
+                video.getUserName(),
+                String.format("https://www.dailymotion.com/%s", video.getUserName()),
+                video.getUserPictureLink());
     }
 
-    public List<VMUser> getUser(String userId){
-        String uri = String.format("", userId);
+    public List<VMUser> getUser(String channelId){
+        String uri = String.format("https://api.dailymotion.com/user/%s/videos?fields=id,title,description,created_time,tags,owner.id,owner.username,owner.avatar_240_url", channelId);
         VideoList videoList = restTemplate.getForObject(uri, VideoList.class);
         return videoList.getVideos().stream()
                 .map(vid -> Transformer.createVMUser(createUser(vid)))
                 .toList();
     }
 
-    public List<VMUser> postUser(String channelHandle, String apiKey) {
+    public List<VMUser> postUser(String channelId, String apiKey) {
         List<VMUser> res = new ArrayList<>();
-        String getUri = String.format("", channelHandle);
-        String postUri = "";
+        String getUri = String.format("https://api.dailymotion.com/user/%s/videos?fields=id,title,description,created_time,tags,owner.id,owner.username,owner.avatar_240_url", channelId);
+        String postUri = "http://localhost:8080/videominer/users";
+
         VideoList videoList = restTemplate.getForObject(getUri, VideoList.class);
         List<VMUser> users = videoList.getVideos().stream()
                 .map(vid -> Transformer.createVMUser(createUser(vid)))
                 .toList();
+
         for (VMUser u : users) {
             HttpEntity<VMUser> request = new HttpEntity<>(u, AuxiliarFunction.getApiKeyHeader(apiKey));
             ResponseEntity<VMUser> response = restTemplate.exchange(postUri, HttpMethod.POST, request, VMUser.class);
@@ -53,7 +58,7 @@ public class UserService {
     }
 
     public VMUser postUser(VMUser vmUser, String apiKey) {
-        String uri = "";
+        String uri = "http://localhost:8080/videominer/users";
         HttpEntity<VMUser> request = new HttpEntity<>(vmUser, AuxiliarFunction.getApiKeyHeader(apiKey));
         ResponseEntity<VMUser> response = restTemplate.exchange(uri, HttpMethod.POST, request, VMUser.class);
         return response.getBody();

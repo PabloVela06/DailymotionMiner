@@ -10,7 +10,7 @@ public class CaptionList {
 
     @JsonProperty("has_more")
     private Boolean hasMore;
-    @JsonProperty("captions")
+    @JsonProperty("list")
     private List<Caption> captions;
 
     @JsonProperty("has_more")
@@ -28,12 +28,12 @@ public class CaptionList {
         return this;
     }
 
-    @JsonProperty("captions")
+    @JsonProperty("list")
     public List<Caption> getCaptions() {
         return captions;
     }
 
-    @JsonProperty("captions")
+    @JsonProperty("list")
     public void setCaptions(List<Caption> captions) {
         this.captions = captions;
     }

@@ -5,7 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="18f6f131-f6d4-47a2-aa66-93b3e650150c" name="Changes" comment="Implemented token request and tested with ChannelServiceTest.getChannel">
-      <change afterPath="$PROJECT_DIR$/src/test/java/aiss/dailymotionminer/service/AuxiliarTestFunction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/aiss/dailymotionminer/controller/ChannelController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/aiss/dailymotionminer/repositories/ChannelRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/aiss/dailymotionminer/service/CaptionServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/aiss/dailymotionminer/service/CommentServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/aiss/dailymotionminer/service/UserServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/aiss/dailymotionminer/service/VideoServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/aiss/dailymotionminer/model/dailymotion/CaptionList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/aiss/dailymotionminer/model/dailymotion/CaptionList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/aiss/dailymotionminer/model/dailymotion/TokenInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/aiss/dailymotionminer/model/dailymotion/Video.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/aiss/dailymotionminer/model/dailymotion/Video.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/aiss/dailymotionminer/model/dailymotion/VideoList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/aiss/dailymotionminer/model/dailymotion/VideoList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/aiss/dailymotionminer/service/AuxiliarFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/aiss/dailymotionminer/service/AuxiliarFunction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/aiss/dailymotionminer/service/CaptionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/aiss/dailymotionminer/service/CaptionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/aiss/dailymotionminer/service/ChannelService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/aiss/dailymotionminer/service/ChannelService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/aiss/dailymotionminer/service/CommentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/aiss/dailymotionminer/service/CommentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/aiss/dailymotionminer/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/aiss/dailymotionminer/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/aiss/dailymotionminer/service/VideoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/aiss/dailymotionminer/service/VideoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/aiss/dailymotionminer/service/AuxiliarTestFunction.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/aiss/dailymotionminer/service/ChannelServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/aiss/dailymotionminer/service/ChannelServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -24,7 +42,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -63,17 +81,33 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "JUnit.CaptionServiceTest.executor": "Run",
+    "JUnit.CaptionServiceTest.getCaption.executor": "Run",
+    "JUnit.CaptionServiceTest.postCaption.executor": "Run",
+    "JUnit.CaptionServiceTest.testPostCaption.executor": "Run",
     "JUnit.ChannelServiceTest.getChannel.executor": "Run",
+    "JUnit.ChannelServiceTest.postChannel.executor": "Run",
+    "JUnit.CommentServiceTest.getComments.executor": "Run",
+    "JUnit.CommentServiceTest.postComments.executor": "Run",
+    "JUnit.UserServiceTest.getUser.executor": "Run",
+    "JUnit.UserServiceTest.postUser.executor": "Run",
+    "JUnit.UserServiceTest.testPostUser.executor": "Run",
+    "JUnit.VideoServiceTest.getVideo.executor": "Run",
+    "JUnit.VideoServiceTest.getVideoDailymotion.executor": "Run",
+    "JUnit.VideoServiceTest.postVideo.executor": "Run",
+    "JUnit.VideoServiceTest.testPostVideo.executor": "Run",
+    "JUnit.VideoServiceTest.updateVideo.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "Spring Boot.DailymotionMinerApplication.executor": "Run",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "testIvan",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/hugop/Desktop/INGENIERÍA INFORMÁTICA SEVILLA/SEGUNDO DE CARRERA SEVILLA/SEGUNDO CUATRIMESTRE/AISS/Spring initializer/Integración/DailymotionMiner",
+    "last_opened_file_path": "C:/Users/ivanc/OneDrive/Documentos/Universidad/segundo/cuatrimestre2/AISS/DailymotionMiner/src/main/java/aiss/dailymotionminer",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -83,6 +117,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ivanc\OneDrive\Documentos\Universidad\segundo\cuatrimestre2\AISS\DailymotionMiner\src\main\java\aiss\dailymotionminer" />
+      <recent name="C:\Users\ivanc\OneDrive\Documentos\Universidad\segundo\cuatrimestre2\AISS\DailymotionMiner\src\test\java\aiss\dailymotionminer\service" />
       <recent name="C:\Users\hugop\Desktop\INGENIERÍA INFORMÁTICA SEVILLA\SEGUNDO DE CARRERA SEVILLA\SEGUNDO CUATRIMESTRE\AISS\Spring initializer\Integración\DailymotionMiner\src\main\java\aiss\dailymotionminer\service" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
@@ -91,9 +127,12 @@
     <key name="CreateTestDialog.RecentsKey">
       <recent name="aiss.dailymotionminer.service" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="aiss.dailymotionminer.service" />
+    </key>
   </component>
-  <component name="RunManager" selected="JUnit.ChannelServiceTest.getChannel">
-    <configuration name="ChannelServiceTest.getChannel" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager">
+    <configuration name="CommentServiceTest.getComments" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="DailyMotionMiner" />
       <extension name="coverage">
         <pattern>
@@ -102,8 +141,72 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="aiss.dailymotionminer.service" />
-      <option name="MAIN_CLASS_NAME" value="aiss.dailymotionminer.service.ChannelServiceTest" />
-      <option name="METHOD_NAME" value="getChannel" />
+      <option name="MAIN_CLASS_NAME" value="aiss.dailymotionminer.service.CommentServiceTest" />
+      <option name="METHOD_NAME" value="getComments" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CommentServiceTest.postComments" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DailyMotionMiner" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="aiss.dailymotionminer.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="aiss.dailymotionminer.service" />
+      <option name="MAIN_CLASS_NAME" value="aiss.dailymotionminer.service.CommentServiceTest" />
+      <option name="METHOD_NAME" value="postComments" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceTest.getUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DailyMotionMiner" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="aiss.dailymotionminer.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="aiss.dailymotionminer.service" />
+      <option name="MAIN_CLASS_NAME" value="aiss.dailymotionminer.service.UserServiceTest" />
+      <option name="METHOD_NAME" value="getUser" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceTest.postUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DailyMotionMiner" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="aiss.dailymotionminer.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="aiss.dailymotionminer.service" />
+      <option name="MAIN_CLASS_NAME" value="aiss.dailymotionminer.service.UserServiceTest" />
+      <option name="METHOD_NAME" value="postUser" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceTest.testPostUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DailyMotionMiner" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="aiss.dailymotionminer.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="aiss.dailymotionminer.service" />
+      <option name="MAIN_CLASS_NAME" value="aiss.dailymotionminer.service.UserServiceTest" />
+      <option name="METHOD_NAME" value="testPostUser" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -118,7 +221,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ChannelServiceTest.getChannel" />
+        <item itemvalue="JUnit.UserServiceTest.testPostUser" />
+        <item itemvalue="JUnit.UserServiceTest.postUser" />
+        <item itemvalue="JUnit.UserServiceTest.getUser" />
+        <item itemvalue="JUnit.CommentServiceTest.postComments" />
+        <item itemvalue="JUnit.CommentServiceTest.getComments" />
       </list>
     </recent_temporary>
   </component>
@@ -195,7 +302,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/main" />
+                        <option value="testIvan" />
                       </list>
                     </value>
                   </entry>
@@ -218,11 +325,10 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/aiss/dailymotionminer/service/ChannelService.java</url>
-          <line>26</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.util.NoSuchElementException" package="java.util" />
+          <option name="timeStamp" value="7" />
+        </breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

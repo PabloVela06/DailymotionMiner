@@ -10,7 +10,7 @@ public class VideoList {
 
     @JsonProperty("has_more")
     private Boolean hasMore;
-    @JsonProperty("videos")
+    @JsonProperty("list")
     private List<Video> videos;
 
     @JsonProperty("has_more")
@@ -28,12 +28,12 @@ public class VideoList {
         return this;
     }
 
-    @JsonProperty("videos")
+    @JsonProperty("list")
     public List<Video> getVideos() {
         return videos;
     }
 
-    @JsonProperty("videos")
+    @JsonProperty("list")
     public void setVideos(List<Video> videos) {
         this.videos = videos;
     }

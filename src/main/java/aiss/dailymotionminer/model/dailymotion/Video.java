@@ -17,11 +17,11 @@ public class Video {
     private String description;
     @JsonProperty("created_time")
     private Integer releaseTime;
-    @JsonProperty("comments")
+    @JsonProperty("tags")
     private List<String> comments;
     @JsonProperty("owner.id")
     private String userId;
-    @JsonProperty("owner.name")
+    @JsonProperty("owner.username")
     private String userName;
     @JsonProperty("owner.avatar_240_url")
     private String userPictureLink;
@@ -86,12 +86,12 @@ public class Video {
         return this;
     }
 
-    @JsonProperty("comments")
+    @JsonProperty("tags")
     public List<String> getComments() {
         return comments;
     }
 
-    @JsonProperty("comments")
+    @JsonProperty("tags")
     public void setComments(List<String> comments) {
         this.comments = comments;
     }
