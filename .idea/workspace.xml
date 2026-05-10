@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="18f6f131-f6d4-47a2-aa66-93b3e650150c" name="Changes" comment="Errors have been fixed">
+    <list default="true" id="18f6f131-f6d4-47a2-aa66-93b3e650150c" name="Changes" comment="Implemented token request and tested with ChannelServiceTest.getChannel">
+      <change afterPath="$PROJECT_DIR$/src/main/java/aiss/dailymotionminer/InitialDataRunner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/aiss/dailymotionminer/service/AuxiliarFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/aiss/dailymotionminer/service/AuxiliarFunction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/aiss/dailymotionminer/service/CaptionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/aiss/dailymotionminer/service/CaptionService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/aiss/dailymotionminer/service/ChannelService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/aiss/dailymotionminer/service/ChannelService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/aiss/dailymotionminer/service/CommentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/aiss/dailymotionminer/service/CommentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/aiss/dailymotionminer/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/aiss/dailymotionminer/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/aiss/dailymotionminer/service/VideoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/aiss/dailymotionminer/service/VideoService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,8 +16,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="54" />
-    <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
+    <option name="cachedIndexableFilesCount" value="44" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -46,8 +42,8 @@
 }</component>
   <component name="GithubPullRequestsUISettings"><![CDATA[{
   "selectedUrlAndAccountId": {
-    "url": "https://github.com/HugoParraga/DailyMotionMiner",
-    "accountId": "2dc56a2c-5ad0-45ad-88f3-9136e680dc82"
+    "url": "https://github.com/PabloVela06/DailymotionMiner.git",
+    "accountId": "b86014ae-ee52-48ef-95e1-8db221d8c9ef"
   }
 }]]></component>
   <component name="MavenImportPreferences">
@@ -108,8 +104,7 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+    "nodejs_package_manager_path": "npm"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -226,14 +221,6 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-jdk-30f59d01ecdd-2fc7cc6b9a17-intellij.indexing.shared.core-IU-253.31033.145" />
-        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-IU-253.31033.145" />
-      </set>
-    </attachedChunks>
-  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="18f6f131-f6d4-47a2-aa66-93b3e650150c" name="Changes" comment="" />
@@ -241,7 +228,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1778169694835</updated>
-      <workItem from="1778423993322" duration="301000" />
     </task>
     <task id="LOCAL-00001" summary="Problems related to packages fixed">
       <option name="closed" value="true" />
@@ -291,15 +277,7 @@
       <option name="project" value="LOCAL" />
       <updated>1778341404636</updated>
     </task>
-    <task id="LOCAL-00007" summary="Errors have been fixed">
-      <option name="closed" value="true" />
-      <created>1778412842041</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1778412842041</updated>
-    </task>
-    <option name="localTasksCounter" value="8" />
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -334,8 +312,7 @@
     <MESSAGE value="Model classes and Transformer class created" />
     <MESSAGE value="Create unfinished services" />
     <MESSAGE value="Implemented token request and tested with ChannelServiceTest.getChannel" />
-    <MESSAGE value="Errors have been fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Errors have been fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented token request and tested with ChannelServiceTest.getChannel" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
